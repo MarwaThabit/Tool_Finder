@@ -1,0 +1,235 @@
+::selection{
+    color: purple;
+}
+main h2::after,main h2::before{
+    position: absolute;
+    content: '';
+    height: 3px;
+    background-color: purple;
+}
+.navbar-nav li:first-of-type a::after,.navbar-nav li:not(.navbar-nav li:first-of-type ) a::after{
+    position: absolute;
+    content: '';
+    background-color: white;
+    bottom: 0;
+}
+/*! ==============================Header Style=========================== */
+.navbar-nav li:first-of-type a::after{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    left: 45%;
+}
+.navbar-nav li:not(.navbar-nav li:first-of-type ) a::after{
+    width: 0px;
+    height: 2px;
+    left: 0;
+    transition: 0.8s;
+}
+.navbar-nav li:not(.navbar-nav li:first-of-type ) a:hover:after{
+    width: 100%;
+}
+nav i,.input-group span:nth-child(3) i{
+    cursor: pointer;
+}
+/*! ==============================Main Style=========================== */
+main form:first-of-type {
+    width: 35%;
+}
+main form:nth-child(3) {
+    width: 45%;
+}
+.input-group input:focus{
+    box-shadow: none;
+}
+input::placeholder{
+    color: white !important;
+}
+.input-group span:nth-child(3),.input-group span:nth-child(1),input,main form:nth-child(3) span:nth-child(2){
+    border-width: 2px !important;
+}
+.input-group span:nth-child(1){
+    border-radius: 24px 0 0 24px !important;
+}
+.input-group span:nth-child(3){
+    border-radius: 0px 24px 24px 0px !important;
+}
+.input-group span:nth-child(3) i{
+    height: 33px;
+    width: 33px;
+    line-height: 33px;
+    margin-right: -9px;
+}
+span.input-group-text img{
+    width: 30px;
+}
+main h2{
+    font-size: 65px;
+    line-height: 1.6;
+}
+main h2::after{
+    width: 21%;
+    bottom: 0;
+    left: 44%;
+}
+main h2::before{
+    width: 10%;
+    bottom: -4%;
+    left: 49%;
+}
+main form,main p{
+    margin-block: 60px;
+}
+.input-group span:nth-child(2) button{
+    background-color: #0e0e72;
+    border-radius: 22px;
+    margin-right: -7px;
+    transition: 1.2s;
+}
+.input-group span:nth-child(2) button:hover{
+    background-color: #700570;
+}
+main form:nth-child(3) .input-group > *{
+    border-color: transparent ;
+}
+main p{
+    font-size: 27px;
+    line-height: 1.9;
+    font-weight: 300;
+    color: #d4cfc7;
+}
+main .icons a {
+    width: 50px;
+    height: 50px;
+}
+.icons a:nth-child(1){
+    top: 12%;
+    left: 12%;
+}
+.icons a:nth-child(2){
+    top: 14%;
+    right: 12%;
+}
+.icons a:nth-child(3){
+    top: 44%;
+    left: 24%;
+}
+.icons a:nth-child(4){
+    top: 44%;
+    right: 24%;
+}
+/*! ==============================Cards Style=========================== */
+.cards-section section.row>section:nth-child(1)>section,
+.cards-section section.row>section:nth-child(3)>section{
+    height: 200px;
+    margin-bottom: 40px;
+}
+.cards-section section.row>section:nth-child(2)>section{
+    height: 440px;
+    margin-bottom: 40px;
+    background: url(../images/img.avif) no-repeat center/cover;
+}
+.header img{
+    height: 30px;
+}
+.cards-section section.row>section>section:not(.subCards),
+.subCards>section{
+    transition: 0.5s;
+}
+.cards-section section.row>section>section:not(.subCards):hover,
+.subCards>section:hover{
+    transform: scale(0.95);
+}
+/*! ==============================Media Queries=========================== */
+@media(max-width:1024px){
+    main form:first-of-type {
+        width: 45%;
+    }
+    main form:nth-child(3) {
+        width: 55%;
+    }
+
+    .icons a:nth-child(1){
+        left: 1%;
+    }
+    .icons a:nth-child(2){
+        right: 1%;
+    }
+    .icons a:nth-child(3){
+        left: 16%
+    }
+    .icons a:nth-child(4){
+        right: 16%
+    }
+    .subCards>section:nth-child(1){
+        margin-right: 20px;
+    }
+}
+@media(max-width:992px){
+    main form:first-of-type {
+        width: 55%;
+    }
+    main form:nth-child(3) {
+        width: 65%;
+    }
+    input{
+        overflow: hidden;
+        text-overflow: ellipsis;
+    } 
+    main h2{
+        font-size: 45px;
+    }
+    .icons a:nth-child(1){
+        left: 3%;
+    }
+    .icons a:nth-child(2){
+        right: 3%;
+    }
+    .icons a:nth-child(3){
+        top:40%;
+        left: 18%
+    }
+    .icons a:nth-child(4){
+        top:40%;
+        right: 18%
+    }
+    main p{
+        font-size: 23px;
+    }
+    .cards-section section.row>section:nth-child(3)>section:nth-child(2){
+        height: 480px;
+    }
+    .subCards>section{
+        height: 200px;
+        margin:0 0 40px 0 !important;
+    }
+}
+@media(max-width:568px){
+    main h2{
+        font-size: 32px;
+    }
+    main .icons a {
+        width: 40px;
+        height: 40px;
+    }
+    .icons a:nth-child(1),.icons a:nth-child(3){
+        left: 2%;
+    }
+    .icons a:nth-child(2),.icons a:nth-child(4){
+        right: 2%;
+    }
+    main form:first-of-type,main form:nth-child(3) {
+        width: 98%;
+    }
+    main p{
+        font-size: 20px;
+    }
+    main h2::after{
+        width: 46%;
+        left: 37%;
+    }
+    main h2::before{
+        width: 25%;
+        left: 48%;
+    }
+}
